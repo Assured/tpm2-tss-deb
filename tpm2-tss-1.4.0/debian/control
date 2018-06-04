@@ -4,9 +4,7 @@ Priority: optional
 Maintainer: blaufish <blaufish@users.noreply.github.com>
 Build-Depends: autoconf,
                autoconf-archive,
-               debhelper (>= 9),
-               dh-autoreconf,
-               dh-systemd,
+               debhelper (>= 10~),
                docbook-xsl,
                libtool,
                pkg-config,
