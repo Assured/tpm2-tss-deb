@@ -1,0 +1,65 @@
+Source: tpm2-tss
+Section: libs
+Priority: optional
+Maintainer: blaufish <blaufish@users.noreply.github.com>
+Build-Depends: autoconf,
+               autoconf-archive,
+               debhelper (>= 9),
+               dh-autoreconf,
+               dh-systemd,
+               docbook-xsl,
+               libtool,
+               pkg-config,
+               xsltproc
+Homepage: https://github.com/01org/TPM2.0-TSS
+Standards-Version: 3.9.8
+
+Package: libsapi0
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: TPM2 Software stack library - TSS and TCTI libraries
+ TPM2.0 TSS (Software Stack) consists of API layers provided to support
+ TPM 2.0 chips. It is made out of three layers:
+ .
+   - System API (SAPI), which implements the system layer API;
+   - TPM Command Transmission Interface (TCTI), which is used by SAPI to
+     allow communication with the TAB/RM layer;
+   - Trusted Access Broker/Resource Manager (TAB/RM), which handles TPM
+     resources and process coordination.
+ .
+ This package contains the TSS and TCTI libraries that client applications
+ will link against when they require accessing the TPM.
+
+Package: libsapi-dev
+Architecture: any
+Section: libdevel
+Depends: libsapi0 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Description: TPM2 Software stack library - development files
+ TPM2.0 TSS (Software Stack) consists of API layers provided to support
+ TPM 2.0 chips. It is made out of three layers:
+ .
+   - System API (SAPI), which implements the system layer API;
+   - TPM Command Transmission Interface (TCTI), which is used by SAPI to
+     allow communication with the TAB/RM layer;
+   - Trusted Access Broker/Resource Manager (TAB/RM), which handles TPM
+     resources and process coordination.
+ .
+ This package contains development files for use when writing applications
+ that need access to TPM chips.
+
+Package: libsapi-utils
+Architecture: any
+Section: utils
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: TPM2 Software stack library - TSS utilities
+ TPM2.0 TSS (Software Stack) consists of API layers provided to support
+ TPM 2.0 chips. It is made out of three layers:
+ .
+   - System API (SAPI), which implements the system layer API;
+   - TPM Command Transmission Interface (TCTI), which is used by SAPI to
+     allow communication with the TAB/RM layer;
+   - Trusted Access Broker/Resource Manager (TAB/RM), which handles TPM
+     resources and process coordination.
+ .
+ This package contains utilities and test applications for use with TPM.
+
