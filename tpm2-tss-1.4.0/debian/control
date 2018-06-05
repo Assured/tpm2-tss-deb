@@ -31,7 +31,7 @@ Description: TPM2 Software stack library - TSS and TCTI libraries
 Package: libsapi-dev
 Architecture: any
 Section: libdevel
-Depends: libsapi0 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Depends: libsapi0 (= ${binary:Version}), ${misc:Depends}
 Description: TPM2 Software stack library - development files
  TPM2.0 TSS (Software Stack) consists of API layers provided to support
  TPM 2.0 chips. It is made out of three layers:
