@@ -3,3 +3,5 @@ echo "tpm2-tss postinstall: create user tss"
 id -u tss || ( sudo groupadd tss && sudo useradd -M -d /var/lib/tpm -s /bin/false -g tss tss )
 echo "tpm2-tss postinstall: reload udev"
 sudo udevadm control --reload-rules && sudo udevadm trigger
+
+#DEBHELPER#

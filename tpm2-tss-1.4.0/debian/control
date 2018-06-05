@@ -45,19 +45,19 @@ Description: TPM2 Software stack library - development files
  This package contains development files for use when writing applications
  that need access to TPM chips.
 
-Package: libsapi-utils
-Architecture: any
-Section: utils
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: TPM2 Software stack library - TSS utilities
- TPM2.0 TSS (Software Stack) consists of API layers provided to support
- TPM 2.0 chips. It is made out of three layers:
- .
-   - System API (SAPI), which implements the system layer API;
-   - TPM Command Transmission Interface (TCTI), which is used by SAPI to
-     allow communication with the TAB/RM layer;
-   - Trusted Access Broker/Resource Manager (TAB/RM), which handles TPM
-     resources and process coordination.
- .
- This package contains utilities and test applications for use with TPM.
-
+#Package: libsapi-utils
+#Architecture: any
+#Section: utils
+#Depends: ${misc:Depends}, ${shlibs:Depends}
+#Description: TPM2 Software stack library - TSS utilities
+# TPM2.0 TSS (Software Stack) consists of API layers provided to support
+# TPM 2.0 chips. It is made out of three layers:
+# .
+#   - System API (SAPI), which implements the system layer API;
+#   - TPM Command Transmission Interface (TCTI), which is used by SAPI to
+#     allow communication with the TAB/RM layer;
+#   - Trusted Access Broker/Resource Manager (TAB/RM), which handles TPM
+#     resources and process coordination.
+# .
+# This package contains utilities and test applications for use with TPM.
+#

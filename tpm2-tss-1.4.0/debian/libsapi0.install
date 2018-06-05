@@ -1,2 +1,6 @@
 usr/lib/*/lib*.so.*
-etc/udev/rules.d/tpm-udev.rules
+usr/share/man/man3/InitDeviceTcti.3
+usr/share/man/man3/InitSocketTcti.3
+usr/share/man/man7/tcti-device.7
+usr/share/man/man7/tcti-socket.7
+lib/udev/rules.d/99-tpm-udev.rules
