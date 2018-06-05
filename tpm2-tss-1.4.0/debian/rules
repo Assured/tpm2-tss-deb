@@ -14,6 +14,8 @@ override_dh_autoreconf_clean:
 
 override_dh_install:
 	find debian/tmp \( -name '*.la' -o -name '*.a' \) -delete
+	mkdir -p debian/tmp/etc/udev/rules.d/
+	cp debian/dist/tpm-udev.rules debian/tmp/etc/udev/rules.d/tpm-udev.rules
 	dh_install --list-missing
 
 override_dh_installinit:
