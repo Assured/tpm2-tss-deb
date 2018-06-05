@@ -1,7 +1,17 @@
 #!/bin/bash
-echo "tpm2-tss postinstall: create user tss"
-id -u tss || ( sudo groupadd tss && sudo useradd -M -d /var/lib/tpm -s /bin/false -g tss tss )
-echo "tpm2-tss postinstall: reload udev"
-sudo udevadm control --reload-rules && sudo udevadm trigger
+set -e
+if id -u tss > /dev/null; then
+  echo 	"tpm2-tss postinstall: user tss allready exists"
+else
+  echo "tpm2-tss postinstall: create user tss"
+  groupadd tss
+  useradd -M -d /var/lib/tpm -s /bin/false -g tss tss
+fi
+if udevadm control --reload-rules; then
+  echo "tpm2-tss postinstall: reloaded udev"
+fi
+if udevadm trigger; then
+  echo "tpm2-tss postinstall: trigger"
+fi
 
 #DEBHELPER#
